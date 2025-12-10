@@ -1,0 +1,3272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <title>Workouts – Everyday Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?!= include('styles'); ?>
+  </head>
+  <body>
+    <?!= include('header'); ?>
+
+    <main>
+      <div class="page-wrap">
+        <section class="dashboard-section">
+          <h1 class="section-title">Daily Workouts</h1>
+          <p class="section-subtitle">
+            A running log of what actually got done — tied to readiness metrics and weekly focus.
+          </p>
+
+          <!-- Week selector -->
+          <div class="week-selector">
+            <label for="weekSelect">Select week:</label>
+            <select id="weekSelect">
+              <!-- You can hard-code at first, or later populate dynamically -->
+              <option value="2025-12-01">Week 01 (Dec 1 – Dec 7)</option>
+              <option value="2025-12-08">Week 01 (Dec 8 – Dec 14)</option>
+              <!-- TODO: add more weeks as you go -->
+            </select>
+          </div>
+        </section>
+
+        <!-- WEEK 2 (example: Dec 8– Dec 14, 2025) -->
+<div class="week-log" data-week="2025-12-08">
+
+  <!-- Morning Readiness – Week 2 -->
+  <section class="dashboard-section">
+    <h2 class="section-title">Morning Readiness</h2>
+    <p class="section-subtitle">
+      HRV, resting HR, sleep, and body metrics that guide how hard to push this week.
+    </p>
+
+       <div class="readiness-grid">
+            <article class="card">
+              <div class="card-tag">Metrics</div>
+              <h3 class="card-title">Body composition / Body pod</h3>
+              <p class="card-body">
+                Screenshot or summary of body composition trends for the selected week.
+              </p>
+              <div class="metric-image-frame">
+  <img 
+    src="data:image/png;base64,
+alt="Body pod screenshot"
+    class="metric-image"
+  >
+</div>
+</article>
+      <!-- Welltory card -->
+      <article class="card">
+              <div class="card-tag">Metrics</div>
+              <h3 class="card-title">Welltory</h3>
+              <p class="card-body">
+                HRV, stress, and readiness from Welltory that guide intensity for the day.
+              </p>
+              <div class="metric-image-frame">
+  <img 
+    src="data:image/png;base64,
+alt="Welltory readiness screenshot"
+    class="metric-image"
+  >
+</div>
+</article>
+
+      <!-- Ultrahuman card -->
+       <article class="card">
+              <div class="card-tag">Metrics</div>
+              <h3 class="card-title">Ultrahuman Ring</h3>
+              <p class="card-body">
+                Sleep, recovery, and strain metrics that inform how aggressive the session should be.
+              </p>
+              <div class="metric-image-frame">
+  <img 
+    src="data:image/png;base64,
+alt="Ultrahuman screenshot"
+    class="metric-image"
+  >
+</div>
+</article>
+    </div>
+  </section>
+
+  <!-- Daily Workout Log – Week 2 -->
+  <section class="dashboard-section">
+    <h2 class="section-title">Daily Workout Log</h2>
+    <p class="section-subtitle">
+      Week 2 – each day with sessions, distances, and primary zone focus.
+    </p>
+
+    <div class="week-days">
+<!-- Monday 12/8/25 – example with one card for today -->
+  <article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Monday – Week 02</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 10.15 hrs · Score 72</li>
+<li><strong>HRV:</strong> 38 ms · <strong>Resting HR:</strong> 49 bpm</li>
+<li><strong>VO₂ Max:</strong> 43.3</li>
+<li><strong>Weight:</strong> 177.6 lb · 14.5% BF · Lean Mass 141.4 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 9 / 10 · <strong>Stress:</strong> 1 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 9 / 10</li>
+<li><strong>BCE:</strong> 2665 · <strong>KVAS:</strong> 16</li>
+</ul>
+</div>
+
+
+<div class="sessions-list">
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Tempo Hyrox pace run</span>
+<span class="session-meta">19 min · 2.04 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 4</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Tempo Hyrox pace run</td>
+<td>-</td>
+<td>19 min</td>
+<td>-</td>
+<td>Run</td>
+<td>Running endurance vo2 max build </td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>1 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>1 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>3 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>14 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">HIIT Hyrox Session</span>
+<span class="session-meta">19 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 4</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Wall Balls 2 min</td>
+<td>3 × 15 @ 16 lb</td>
+<td>90 sec</td>
+<td>Both</td>
+<td>Wall Ball</td>
+<td>2 min to do 20</td>
+</tr>
+<tr>
+<td>Walking Lunges</td>
+<td>3 × 20 @ 20 lb</td>
+<td>90 sec</td>
+<td>Alternating</td>
+<td>Lunges</td>
+<td>2 min to do 20 for each leg</td>
+</tr>
+<tr>
+<td>Push ups</td>
+<td>3 × 40</td>
+<td>180 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>40 as fast as possible</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>7 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>12 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Cool down</span>
+<span class="session-meta">22 min · 1.5 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 2</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Cool down</td>
+<td>-</td>
+<td>22 min</td>
+<td>-</td>
+<td>No</td>
+<td>Vo2 Max building</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>2 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>10 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>3 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>7 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Walk / Jog</span>
+<span class="session-meta">35 min · 2.5 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Walk / Jog</td>
+<td>-</td>
+<td>35 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Raising HRV</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>35 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Raising HRV</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+
+      <!-- Tuesday 12/9/25 – example with one card for today -->
+<article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Tuesday – Week 02</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 7.5 hrs · Score 83</li>
+<li><strong>HRV:</strong> 51 ms · <strong>Resting HR:</strong> 51 bpm</li>
+<li><strong>VO₂ Max:</strong> 43.2</li>
+<li><strong>Weight:</strong> 177.6 lb · 14.5% BF · Lean Mass 141.4 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 9 / 10 · <strong>Stress:</strong> 1 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 9 / 10</li>
+<li><strong>BCE:</strong> 2665 · <strong>KVAS:</strong> 16</li>
+</ul>
+</div>
+
+
+<div class="sessions-list">
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">HIIT Hyrox Session</span>
+<span class="session-meta">60 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 3</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Air Squats</td>
+<td>4 × 20</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>30 seconds per round</td>
+</tr>
+<tr>
+<td>Left side plank</td>
+<td>4 × 1</td>
+<td>120 sec</td>
+<td>Left</td>
+<td>Other</td>
+<td>30 seconds per round</td>
+</tr>
+<tr>
+<td>Left side plank</td>
+<td>4 × 1</td>
+<td>120 sec</td>
+<td>Right</td>
+<td>Other</td>
+<td>30 seconds per round</td>
+</tr>
+<tr>
+<td>Calf raises</td>
+<td>4 × 30</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>30 seconds per round</td>
+</tr>
+<tr>
+<td>Plank to shoulder taps</td>
+<td>4 × 20</td>
+<td>120 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>30 seconds per round</td>
+</tr>
+<tr>
+<td>Mountain climbers</td>
+<td>4 × 20</td>
+<td>120 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>30 seconds per round</td>
+</tr>
+<tr>
+<td>Wall sits</td>
+<td>4 × 1</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>30 seconds per round</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>5 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>15 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>40 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>Recovery Raising HRV</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+
+      <!-- Wednesday 12/10/25 – example with one card for today -->
+<article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Wednesday – Week 02</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 7.5 hrs · Score 90</li>
+<li><strong>HRV:</strong> 47 ms · <strong>Resting HR:</strong> 49 bpm</li>
+<li><strong>VO₂ Max:</strong> 43.2</li>
+<li><strong>Weight:</strong> 176.5 lb · 14.1% BF · Lean Mass 141.5 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 9 / 10 · <strong>Stress:</strong> 1 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 9 / 10</li>
+<li><strong>BCE:</strong> 2470 · <strong>KVAS:</strong> 17</li>
+</ul>
+</div>
+
+
+<div class="sessions-list">
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Morning Stretch</span>
+<span class="session-meta">15 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Cat cow</td>
+<td>3 × 1</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Hip circles </td>
+<td>3 × 1</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Glute squeeze </td>
+<td>3 × 1</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Ankle mobility</td>
+<td>3 × 1</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Thoracic rotations</td>
+<td>3 × 20</td>
+<td>60 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>15 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">HIIT Hyrox Session</span>
+<span class="session-meta">15 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 3</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Air Squats</td>
+<td>3 × 30</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>60 seconds per round</td>
+</tr>
+<tr>
+<td>Push ups</td>
+<td>3 × 30</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>60 seconds per round</td>
+</tr>
+<tr>
+<td>Lunges </td>
+<td>3 × 30</td>
+<td>60 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>60 seconds per round</td>
+</tr>
+<tr>
+<td>Wall sits</td>
+<td>3 × 1</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>60 seconds per round</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>2 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>2 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>11 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>Recovery Raising HRV</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+      <!-- Thursday 12/11/25 – example with one card for today -->
+
+      <!-- Friday 12/12/25 – example with one card for today -->
+
+      <!-- Saturday 12/13/25 – example with one card for today -->
+
+      <!-- Sunday 12/14/25 – example with one card for today -->
+
+    </div>
+  </section>
+
+</div> <!-- end WEEK 2 -->
+
+
+        <!-- Week o1 begins --> 
+        <div class="week-log" data-week="2025-12-01">
+        <section class="dashboard-section">
+          <h2 class="section-title">Morning Readiness</h2>
+          <p class="section-subtitle">
+            HRV, resting HR, and recovery markers that influence how hard to push on the day’s training.
+          </p>
+
+          <div class="readiness-grid">
+            <article class="card">
+              <div class="card-tag">Metrics</div>
+              <h3 class="card-title">Body composition / Body pod</h3>
+              <p class="card-body">
+                Screenshot or summary of body composition trends for the selected week.
+              </p>
+              <div class="metric-image-frame">
+  <img 
+    src="data:image/png;base64,
+    alt="Body pod screenshot"
+    class="metric-image"
+  >
+</div>
+            </article>
+
+            <article class="card">
+              <div class="card-tag">Metrics</div>
+              <h3 class="card-title">Welltory</h3>
+              <p class="card-body">
+                HRV, stress, and readiness from Welltory that guide intensity for the day.
+              </p>
+              <div class="metric-image-frame">
+  <img 
+    src="data:image/png;base64,
+    alt="Welltory readiness screenshot"
+    class="metric-image"
+  >
+</div>
+            </article>
+
+            <article class="card">
+              <div class="card-tag">Metrics</div>
+              <h3 class="card-title">Ultrahuman Ring</h3>
+              <p class="card-body">
+                Sleep, recovery, and strain metrics that inform how aggressive the session should be.
+              </p>
+              <div class="metric-image-frame">
+  <img 
+    src="data:image/png;base64,
+    alt="Ultrahuman screenshot"
+    class="metric-image"
+  >
+</div>
+
+</article>
+</div>
+</section>
+
+<section class="dashboard-section">
+  <h2 class="section-title">Daily Workout Log</h2>
+  <p class="section-subtitle">
+    Weekly view from Monday to Sunday. Each day can have multiple sessions, with exercises, duration,
+    distance, and dominant HR zone.
+  </p>
+
+    <!-- Monday 12/1/25 -->
+<article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Monday – Week 01</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 7.45 hrs · Score 84</li>
+<li><strong>HRV:</strong> 63 ms · <strong>Resting HR:</strong> 47 bpm</li>
+<li><strong>VO₂ Max:</strong> 42</li>
+<li><strong>Weight:</strong> 178.1 lb · 15.1% BF · Lean Mass 140.7 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 9 / 10 · <strong>Stress:</strong> 1 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 10 / 10</li>
+<li><strong>BCE:</strong> 2418 · <strong>KVAS:</strong> 16</li>
+</ul>
+</div>
+
+<div class="sessions-list">
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Walk / Jog</span>
+<span class="session-meta">55 min · 5.04 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 2</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Walk / Jog</td>
+<td>-</td>
+<td>55 min</td>
+<td>-</td>
+<td>No</td>
+<td>Vo2 Max building</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>5 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>50 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Raising HRV</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+
+
+   <!-- Tuesday 12/2/25 -->
+<article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Tuesday – Week 01</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 6.25 hrs · Score 64</li>
+<li><strong>HRV:</strong> 42 ms · <strong>Resting HR:</strong> 56 bpm</li>
+<li><strong>VO₂ Max:</strong> 43</li>
+<li><strong>Weight:</strong> 176.5 lb · 15% BF · Lean Mass 140.8 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 9 / 10 · <strong>Stress:</strong> 1 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 10 / 10</li>
+<li><strong>BCE:</strong> 2535 · <strong>KVAS:</strong> 17</li>
+</ul>
+</div>
+
+
+<div class="sessions-list">
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Mobility and Strength</span>
+<span class="session-meta">45 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Glute squeezes</td>
+<td>3 × 12</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Activation</td>
+</tr>
+<tr>
+<td>Slide leg lifts</td>
+<td>3 × 12</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Hip Control</td>
+</tr>
+<tr>
+<td>Mini Hinges</td>
+<td>3 × 12</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Posterior chain warm-up</td>
+</tr>
+<tr>
+<td>Piriformis Stretch</td>
+<td>3 × 1</td>
+<td>90 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Nerve Mobility</td>
+</tr>
+<tr>
+<td>Glute Bridge</td>
+<td>3 × 12 @ 30 lb</td>
+<td>180 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Glute Priming</td>
+</tr>
+<tr>
+<td>Gorilla rows</td>
+<td>3 × 12 @ 35 lb</td>
+<td>180 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Back engaggement</td>
+</tr>
+<tr>
+<td>Hamstring Curls</td>
+<td>3 × 12 @ 55 lb</td>
+<td>180 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Postier chain</td>
+</tr>
+<tr>
+<td>Leg Extensions</td>
+<td>3 × 12 @ 55 lb</td>
+<td>180 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Controlled tempo</td>
+</tr>
+<tr>
+<td>Bird dogs</td>
+<td>3 × 12 @ 10 lb</td>
+<td>180 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Core control</td>
+</tr>
+<tr>
+<td>Dead bugs</td>
+<td>3 × 12 @ 20 lb</td>
+<td>180 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Core stability</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>19 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>12 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>13 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>1 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Walk / Jog</span>
+<span class="session-meta">20 min · 1.35 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Walk / Jog</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Walk</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Raising HRV</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+
+    <!-- Wednesday (12/03/25) -->
+<article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Wednesday – Week 01</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 8.6 hrs · Score 88</li>
+<li><strong>HRV:</strong> 55 ms · <strong>Resting HR:</strong> 47 bpm</li>
+<li><strong>VO₂ Max:</strong> 43.3</li>
+<li><strong>Weight:</strong> 177.5 lb · 14.8% BF · Lean Mass 140.4 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 9 / 10 · <strong>Stress:</strong> 1 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 10 / 10</li>
+<li><strong>BCE:</strong> 2418 · <strong>KVAS:</strong> 16</li>
+</ul>
+</div>
+
+<div class="sessions-list">
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Hip and back Mobility Flush</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Cat-Cow</td>
+<td>3 × 10</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Fluid spinal warm-up</td>
+</tr>
+<tr>
+<td>QL stretch</td>
+<td>3 × 10</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Reduced lateral tightness</td>
+</tr>
+<tr>
+<td>Standing hip circles</td>
+<td>3 × 12</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Hip capsule rotation</td>
+</tr>
+<tr>
+<td>Side glute lifts</td>
+<td>3 × 10</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Glute med activation</td>
+</tr>
+<tr>
+<td>Piriformis glides</td>
+<td>3 × 10</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Loosen sciatic pathway</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Treadmill walk</span>
+<span class="session-meta">20 min · 1.35 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Treadmill walk</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Walk</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Outdoor walk</span>
+<span class="session-meta">10 min · 0.5 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Outdoor walk</td>
+<td>-</td>
+<td>10 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Walk</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>10 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Raising HRV</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+
+<!-- Thursday 12/4/25 -->
+<article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Thursday – Week 01</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 5.1 hrs · Score 72</li>
+<li><strong>HRV:</strong> 49 ms · <strong>Resting HR:</strong> 52 bpm</li>
+<li><strong>VO₂ Max:</strong> 42</li>
+<li><strong>Weight:</strong> 177.3 lb · 14.7% BF · Lean Mass 140.4 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 7 / 10 · <strong>Stress:</strong> 3 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 9 / 10</li>
+<li><strong>BCE:</strong> 2418 · <strong>KVAS:</strong> 16</li>
+</ul>
+</div>
+
+
+<div class="sessions-list">
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Morning stretch</span>
+<span class="session-meta">15 min · 0.75 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Calf Stretch (straight knee)</td>
+<td>2 × 1</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Calf cramp during the night</td>
+</tr>
+<tr>
+<td>Calf stretch (bent knee for soleus)</td>
+<td>2 × 1</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Calf Cramp</td>
+</tr>
+<tr>
+<td>Tennis ball or massage gun</td>
+<td>1 × 1</td>
+<td>60 sec</td>
+<td>Right</td>
+<td>Other</td>
+<td>Calf Cramp</td>
+</tr>
+<tr>
+<td>Ankle dorsiflexion reps</td>
+<td>2 × 15</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Right Calf Cramp</td>
+</tr>
+<tr>
+<td>Heel raises slow</td>
+<td>2 × 12</td>
+<td>60 sec</td>
+<td>Right</td>
+<td>Other</td>
+<td>Right Calf Cramp</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>15 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Strength training</span>
+<span class="session-meta">70 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 2</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Kettle bell swings</td>
+<td>4 × 12 @ 44 lb</td>
+<td>240 sec</td>
+<td>Both</td>
+<td>Farmers Carry</td>
+<td>Single dumbell swing between legs</td>
+</tr>
+<tr>
+<td>RDL</td>
+<td>4 × 12 @ 44 lb</td>
+<td>240 sec</td>
+<td>Both</td>
+<td>Sled Push</td>
+<td>Lower back and hamstrings 44 LB in each hand </td>
+</tr>
+<tr>
+<td>Elevated reverse lunge</td>
+<td>4 × 12 @ 25 lb</td>
+<td>240 sec</td>
+<td>Alternating</td>
+<td>Lunges</td>
+<td>Reverse lunge then twist with dumbell to the leg that is up</td>
+</tr>
+<tr>
+<td>Walking Lunges</td>
+<td>4 × 20 @ 20 lb</td>
+<td>120 sec</td>
+<td>Alternating</td>
+<td>Lunges</td>
+<td>Kettle bell pass through on each lunge 20 meters </td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>14 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>27 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>27 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>2 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Cool down</span>
+<span class="session-meta">15 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Cool down</td>
+<td>-</td>
+<td>15 min</td>
+<td>-</td>
+<td>No</td>
+<td>recovery</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>15 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Raising HRV</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+
+<!-- Friday 12/5/25 -->
+<article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Friday – Week 01</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 7 hrs · Score 88</li>
+<li><strong>HRV:</strong> 47 ms · <strong>Resting HR:</strong> 52 bpm</li>
+<li><strong>VO₂ Max:</strong> 43.3</li>
+<li><strong>Weight:</strong> 178 lb · 14.7% BF · Lean Mass 141 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 9 / 10 · <strong>Stress:</strong> 1 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 9 / 10</li>
+<li><strong>BCE:</strong> 2418 · <strong>KVAS:</strong> 16</li>
+</ul>
+</div>
+
+<div class="sessions-list">
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Tonal core</span>
+<span class="session-meta">25 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 2</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Seated Cable Crunch</td>
+<td>3 × 12 @ 75 lb</td>
+<td>180 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Core</td>
+</tr>
+<tr>
+<td>Rotational Chop</td>
+<td>3 × 10 @ 35 lb</td>
+<td>180 sec</td>
+<td>Both</td>
+<td>Farmers Carry</td>
+<td>Core oblique </td>
+</tr>
+<tr>
+<td>Pillar bridge with row</td>
+<td>3 × 10 @ 20 lb</td>
+<td>180 sec</td>
+<td>Alternating</td>
+<td>Rower</td>
+<td>Core strength while row</td>
+</tr>
+<tr>
+<td>V-ups</td>
+<td>3 × 12 @ 16 lb</td>
+<td>90 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Core with heart rate</td>
+</tr>
+<tr>
+<td>Resisted leg raise</td>
+<td>3 × 10 @ 35 lb</td>
+<td>60 sec</td>
+<td>Both</td>
+<td>Other</td>
+<td>Holding weight up while legs raise</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>5 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Tempo Hyrox pace run</span>
+<span class="session-meta">21 min · 2.5 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 4</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Tempo Hyrox pace run</td>
+<td>-</td>
+<td>21 min</td>
+<td>-</td>
+<td>Run</td>
+<td>Running endurance vo2 max build </td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>1 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>6 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>14 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Recover mobility walk</span>
+<span class="session-meta">9 min · 0.5 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 2</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Recover mobility walk</td>
+<td>-</td>
+<td>9 min</td>
+<td>-</td>
+<td>Walk</td>
+<td>Zone 2 recovery</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>9 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Morning Stretch</span>
+<span class="session-meta">8 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Hip flexor kneeling left/right</td>
+<td>2 × 12</td>
+<td>120 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Hamstring leg raise </td>
+<td>2 × 12</td>
+<td>120 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Bretzel 90 / 90 stretch</td>
+<td>2 × 12</td>
+<td>120 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Calf raises</td>
+<td>2 × 12</td>
+<td>120 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>8 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Afternoon Stretch</span>
+<span class="session-meta">60 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Hip flexor kneeling left/right</td>
+<td>4 × 12</td>
+<td>240 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Hamstring leg raise </td>
+<td>4 × 12</td>
+<td>240 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Chest Opener</td>
+<td>4 × 12</td>
+<td>240 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Quad Stretch</td>
+<td>4 × 12</td>
+<td>240 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>Calf Stretch Wall lean</td>
+<td>4 × 12</td>
+<td>240 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+<tr>
+<td>T-spine stretch</td>
+<td>4 × 12</td>
+<td>240 sec</td>
+<td>Alternating</td>
+<td>Other</td>
+<td>Stretch</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>60 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Raising HRV</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+
+   <!-- SATURDAY -->
+<article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Saturday – Week 01</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 8.5 hrs · Score 85</li>
+<li><strong>HRV:</strong> 58 ms · <strong>Resting HR:</strong> 48 bpm</li>
+<li><strong>VO₂ Max:</strong> 43.3</li>
+<li><strong>Weight:</strong> 178.2 lb · 14.6% BF · Lean Mass 141.1 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 9 / 10 · <strong>Stress:</strong> 1 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 9 / 10</li>
+<li><strong>BCE:</strong> 2418 · <strong>KVAS:</strong> 16</li>
+</ul>
+</div>
+
+<div class="sessions-list">
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Outdoor run</span>
+<span class="session-meta">20 min · 2.5 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 3</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Outdoor run</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Hyrox Pace run</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>1 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>5 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>7 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>7 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Hyrox Class AMRAP</span>
+<span class="session-meta">77 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>SkiERG 2 min</td>
+<td>4 × 60 @ 4 lb</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>SkiERG</td>
+<td>2 min to do 500 m</td>
+</tr>
+<tr>
+<td>Sled Push 2 min</td>
+<td>4 × 60 @ 200 lb</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Sled Push</td>
+<td>2 min to do as many meters</td>
+</tr>
+<tr>
+<td>Sled Pull 2 min</td>
+<td>4 × 60 @ 200 lb</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Sled Pull</td>
+<td>2 min to do as many meters</td>
+</tr>
+<tr>
+<td>Burpee Broad Jump 2 min</td>
+<td>4 × 60 @ 22 lb</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Burpee Broad Jump</td>
+<td>2 min to do as many as possible</td>
+</tr>
+<tr>
+<td>Rower 2 min</td>
+<td>4 × 60 @ 4 lb</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Rower</td>
+<td>2 min to do 500 m</td>
+</tr>
+<tr>
+<td>Farmer Carry 2 min</td>
+<td>4 × 60 @ 4 lb</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Farmers Carry</td>
+<td>2 min to do 100 m</td>
+</tr>
+<tr>
+<td>Sandbag Lunges 2 min</td>
+<td>4 × 60 @ 40 lb</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Lunges</td>
+<td>2 min to do 25 m</td>
+</tr>
+<tr>
+<td>Wall Balls 2 min</td>
+<td>4 × 60 @ 16 lb</td>
+<td>120 sec</td>
+<td>Both</td>
+<td>Wall Ball</td>
+<td>2 min to do 20</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>28 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>18 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>26 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>5 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Outdoor run</span>
+<span class="session-meta">20 min · 2.5 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 3</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Outdoor run</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Hyrox Pace run</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>1 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>5 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>7 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>7 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Raising HRV</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+
+    <!-- Sunday 12/7/25 -->
+    <article class="card workout-day">
+<div class="workout-day-header">
+<div class="workout-date">Sunday – Week 01</div>
+<div class="workout-tag">Daily Training Summary</div>
+</div>
+
+<div class="daily-metrics-block">
+<h4>Daily Metrics</h4>
+<ul class="daily-metrics-list">
+<li><strong>Sleep:</strong> 9.25 hrs · Score 87</li>
+<li><strong>HRV:</strong> 60 ms · <strong>Resting HR:</strong> 47 bpm</li>
+<li><strong>VO₂ Max:</strong> 43.3</li>
+<li><strong>Weight:</strong> 177.6 lb · 14.5% BF · Lean Mass 141.4 lb</li>
+<li><strong>DOMS:</strong> 1 · <strong>Energy:</strong> 9 / 10 · <strong>Stress:</strong> 1 / 10</li>
+<li><strong>Hydration:</strong> Hydrated · <strong>Mood:</strong> 9 / 10</li>
+<li><strong>BCE:</strong> 2418 · <strong>KVAS:</strong> 16</li>
+</ul>
+</div>
+
+<div class="sessions-list">
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">Walk / Jog</span>
+<span class="session-meta">55 min · 5.16 mi</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 2</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Walk / Jog</td>
+<td>-</td>
+<td>55 min</td>
+<td>-</td>
+<td>No</td>
+<td>Vo2 Max building</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>1 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>47 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>7 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="session">
+<div class="session-header">
+<div class="session-main">
+<span class="session-name">NSDR Breathing</span>
+<span class="session-meta">20 min</span>
+</div>
+<div class="session-zone">Primary Zone: Zone 1</div>
+</div>
+
+<table class="session-table">
+<thead>
+<tr>
+<th>Exercise</th>
+<th>Reps / Load</th>
+<th>Duration</th>
+<th>Side / Stance</th>
+<th>Hyrox Focus</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>NSDR Breathing</td>
+<td>-</td>
+<td>20 min</td>
+<td>-</td>
+<td>No</td>
+<td>Recovery Raising HRV</td>
+</tr>
+</tbody>
+</table>
+
+<div class="session-hr-summary">
+<h4>Heart Rate Summary</h4>
+<table class="snapshot-table">
+<thead>
+<tr>
+<th colspan="2">HR Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td>Zone 1</td>
+<td>20 min</td>
+</tr>
+<tr class="zone-2">
+<td>Zone 2</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-3">
+<td>Zone 3</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-4">
+<td>Zone 4</td>
+<td>0 min</td>
+</tr>
+<tr class="zone-5">
+<td>Zone 5</td>
+<td>0 min</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</article>
+
+  </div> 
+</section>
+</div> <!-- end week 01 -->
+
+
+    </main>
+
+    <?!= include('footer'); ?>
+
+    <script>
+  (function () {
+    var select = document.getElementById('weekSelect');
+    if (!select) return;
+
+    function showWeek(weekValue) {
+      var weekLogs = document.querySelectorAll('.week-log');
+      weekLogs.forEach(function (div) {
+        if (div.getAttribute('data-week') === weekValue) {
+          div.style.display = '';
+        } else {
+          div.style.display = 'none';
+        }
+      });
+    }
+
+    // Read ?week=YYYY-MM-DD from URL if present
+    var params = new URLSearchParams(window.location.search);
+    var weekParam = params.get('week');
+    var initialWeek = weekParam || select.value;
+
+    select.value = initialWeek;
+    showWeek(initialWeek);
+
+    select.addEventListener('change', function () {
+      var week = this.value;
+
+      // Update the URL (no page reload)
+      var url = new URL(window.location.href);
+      url.searchParams.set('page', 'workouts');
+      url.searchParams.set('week', week);
+      window.history.replaceState({}, '', url.toString());
+
+      showWeek(week);
+    });
+  })();
+</script>
+
+  </body>
+</html>
+

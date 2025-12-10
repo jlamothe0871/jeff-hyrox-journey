@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <title>Journey Dashboard – Everyday Engine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?!= include('styles'); ?>
+  </head>
+  <body>
+    <?!= include('header'); ?>
+
+    <main>
+     
+      <div class="page-wrap">
+        
+        <section class="section">
+          <div class="section-header">
+            <h1 class="section-title">Journey Dashboard</h1>
+          </div>
+          <p class="page-intro">
+            These charts update as I log training sessions in Google Sheets.
+            The point isn’t perfection — it’s to show the reality of building capacity
+            for Hyrox over time: the good weeks, the tired weeks, and the breakthroughs.
+          </p>
+        </section>
+
+        <!-- Volume & frequency -->
+        <section class="dashboard-section">
+  <h2 class="section-title">Training Volume & Frequency</h2>
+  <p class="section-subtitle">
+    Weekly snapshot of overall work: total minutes, number of sessions, distance covered, and recovery quality.
+  </p>
+
+  <div class="volume-grid">
+    <!-- Total Minutes -->
+    <article class="card card--metric">
+      <div class="card-tag">Volume</div>
+      <h3 class="card-title">Total Minutes</h3>
+      <p class="card-body">
+        Total training time.
+      </p>
+      <div class="metric-value"></div>
+      <div class="metric-sub">Total Minutes in training per week</div>
+      <!-- You can swap the text with a dynamic value later -->
+     <iframe width="499" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=210217190&amp;format=interactive"></iframe>
+    </article>
+
+    <!-- Number of Sessions -->
+    <article class="card card--metric">
+      <div class="card-tag">Frequency</div>
+      <h3 class="card-title">Number of Sessions</h3>
+      <p class="card-body">
+        How many separate training sessions that have been completed.
+      </p>
+      <div class="metric-value"></div>
+      <div class="metric-sub">Total Training Sessions per week</div>
+      <iframe width="499" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=318310090&amp;format=interactive"></iframe>
+    </article>
+
+    <!-- Weekly Distance Covered -->
+    <article class="card card--metric">
+      <div class="card-tag">Distance</div>
+      <h3 class="card-title">Weekly Distance Covered</h3>
+      <p class="card-body">
+        Total running / walking distance for the week.
+      </p>
+      <div class="metric-value"></div>
+      <div class="metric-sub">Sum of Miles either walked or run per week</div>
+      <iframe width="499" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=406933724&amp;format=interactive"></iframe>
+    </article>
+
+    <!-- Sleep Hours -->
+    <article class="card card--metric">
+      <div class="card-tag">Recovery</div>
+      <h3 class="card-title">Sleep Hours</h3>
+      <p class="card-body">
+        Total number of sleep hours for the week.
+      </p>
+      <div class="metric-value"></div>
+      <div class="metric-sub">Avg Sleep Hours per week</div>
+     <iframe width="499" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=590005111&amp;format=interactive"></iframe>
+    </article>
+  </div>
+
+  <!-- Optional: if you still want a big volume chart under the cards,
+       you can add it here in a full-width card later. -->
+
+</section>
+
+      <section class="dashboard-section">
+  <h2 class="section-title">Intensity &amp; Recovery Markers</h2>
+  <p class="section-subtitle">
+    How hard the engine is working and how well it’s bouncing back: effort in the higher zones,
+    nervous system readiness, sleep quality, and VO₂ Max trends.
+  </p>
+
+  <div class="intensity-grid">
+
+    <!-- Card 1: Time in heart-rate zones -->
+    <article class="card card-wide">
+      <div class="card-tag">Intensity</div>
+      <h3 class="card-title">Time in heart-rate zones</h3>
+      <p class="card-body">
+        Track how much time I spend in easier Zone 2 work vs higher-intensity sessions.
+      </p>
+      <div class="data-embed">
+        <!-- HR zone distribution chart from Google Sheets -->
+         <iframe width="580" height="376" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=1529301353&amp;format=interactive"></iframe>
+      </div>
+    </article>
+
+    <!-- Card 2: HRV / Resting HR trend -->
+    <article class="card card-wide">
+      <div class="card-tag">Recovery</div>
+      <h3 class="card-title">HRV &amp; Resting HR trend</h3>
+      <p class="card-body">
+        These trends help me see whether training and life stress are balanced or if I need to back off and recover.
+      </p>
+      <div class="data-embed">
+        <iframe width="580" height="376" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=1194507007&amp;format=interactive"></iframe>
+      </div>
+    </article>
+
+    <!-- Card 3: Sleep Score -->
+    <article class="card card-wide">
+      <div class="card-tag">Sleep</div>
+      <h3 class="card-title">Sleep score</h3>
+      <p class="card-body">
+        Average nightly sleep score for the week, combining duration and quality into one simple checkpoint.
+      </p>
+      <div class="data-embed">
+       <iframe width="572" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=736627100&amp;format=interactive"></iframe>
+      </div>
+    </article>
+
+    <!-- Card 4: VO₂ Max -->
+    <article class="card card-wide">
+      <div class="card-tag">Engine</div>
+      <h3 class="card-title">VO₂ Max trend</h3>
+      <p class="card-body">
+        Estimated VO₂ Max over time as a simple indicator of aerobic engine size and long-term conditioning.
+      </p>
+      <div class="data-embed">
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=1250769439&amp;format=interactive"></iframe>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+        <!-- Hyrox benchmarks -->
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">Hyrox-specific benchmarks</h2>
+            <p class="section-subtitle">Station times and key workouts over the season.</p>
+          </div>
+
+  <div class="hyrox-class-summary">
+    <h3 class="card-title">Baseline Hyrox Class – Format & Heart-Rate Profile</h3>
+    <p class="card-body">
+      This session at HIT Athletic (Austin, TX) was a 71-minute Hyrox technique and conditioning class:
+      a short warm-up, then a rotating AMRAP-style circuit across eight Hyrox stations, followed by
+      cooldown and mobility.
+    </p>
+
+    <ul class="hyrox-format-list">
+      <li><strong>Warm-up (6 min):</strong> 3 min brisk walk + 3 min light jog to bring HR into Zones 1–2.</li>
+      <li>
+        <strong>Main circuit:</strong> 4 rounds × 2 minutes per station, rotating through:
+        SkiERG (400m), Sled Push (200 lb, 25m), Sled Pull (200 lb, 25m), Burpee Broad Jumps,
+        Rowing (400m), Farmer Carry (50 lb per hand, 100m), Sandbag Lunges (40 lb), and Wall Balls (16 lb).
+        If a station finished early, remaining time in the 2-minute cap was used for rest.
+      </li>
+      <li><strong>Cooldown:</strong> 400m walk plus ~15 minutes of stretching (quads, glutes, hips, hamstrings, calves).</li>
+      <li><strong>Ranking Legend:</strong> 4 = Easy | 3 = Medium | 2 = Hard | 1 = Hardest </li>
+      <li><strong>Primary Load Per Station</strong> 4 for SkiERG and Rowing is the Damper setting. All other values are in lbs</li>
+    </ul>
+
+    <div class="week-snapshot hyrox-snapshot">
+      <table class="snapshot-table">
+        <thead>
+          <tr>
+            <th colspan="2">Hyrox Class – Heart-Rate Zones (Total Time: 1:17:43)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Total Time in Session</strong></td>
+            <td>1:17:43</td>
+          </tr>
+          <tr class="zone-1">
+            <td>Zone 1</td>
+            <td>0:27:16</td>
+          </tr>
+          <tr class="zone-2">
+            <td>Zone 2</td>
+            <td>0:17:55</td>
+          </tr>
+          <tr class="zone-3">
+            <td>Zone 3</td>
+            <td>0:25:38</td>
+          </tr>
+          <tr class="zone-4">
+            <td>Zone 4</td>
+            <td>0:04:22</td>
+          </tr>
+          <tr class="zone-5">
+            <td>Zone 5</td>
+            <td>0:02:32</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+          <div class="data-embed">
+           <iframe width="991" height="371" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=1263555850&amp;format=interactive"></iframe>
+          </div>
+
+          <div class="data-embed">
+           <iframe width="991" height="371" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtDdM2lDhqg2gXJr4gtz2BeKjxS8EJCbSnTJytZgA6wLnjUKHaUBVeiyaQlIF7adwkFFHHz3oOuYu/pubchart?oid=494340607&amp;format=interactive"></iframe>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+
+    <?!= include('footer'); ?>
+  </body>
+</html>
+

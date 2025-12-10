@@ -6,8 +6,36 @@
     <title>Everyday Engine – Hyrox Journey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?!= include('styles'); ?>
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <header class="site-header">
+      <div class="nav-inner">
+        <a href="https://script.google.com/macros/s/AKfycbwqaHDtrangRMZOslUZ9uYREU1mz_kUnRdMuUKr6dAZb7uG8vweLAMVPLSChZuzFQ_f/exec?page=home" class="brand">
+          <div class="brand-mark"></div>
+          <div class="brand-text">
+            <span class="brand-title">Everyday Engine</span>
+            <span class="brand-subtitle">Hyrox Journey</span>
+          </div>
+        </a>
+    
+        <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="journey-dashboard.html">Journey Dashboard</a>
+      <a href="weekly-recaps.html">Weekly Recaps</a>
+      <a href="workouts.html">Workouts</a>
+      <a href="about.html">About</a>
+      <a href="routine.html">Routine</a>
+      <a href="start-your-journey.html">Start Your Own Journey</a>
+      <a href="community.html" class="nav-cta">Community</a>
+    </nav>
+    
+    
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
     <?!= include('header'); ?>
 
     <main>
@@ -264,6 +292,11 @@
     </main>
 
     <?!= include('footer'); ?>
+    <footer class="site-footer">
+      <div class="page-wrap">
+        <div>Built to document a real Hyrox journey week by week. No hype, just honest work.</div>
+      </div>
+    </footer>
   </body>
 </html>
 

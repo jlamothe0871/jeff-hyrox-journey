@@ -133,7 +133,7 @@ main {
 
 /* Mobile nav */
 .nav-toggle {
-  display: none;
+  <!--display: none;-->
   cursor: pointer;
 }
 
@@ -1026,5 +1026,26 @@ main {
   }
   .hero {
     padding: 18px;
+  }
+}
+
+/* Make sure nav always shows, even on mobile */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .site-nav {
+    display: flex;           /* override any earlier display:none */
+    flex-direction: column;  /* stack links vertically */
+    gap: 0.5rem;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 0.5rem 0;
   }
 }

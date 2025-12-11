@@ -1049,3 +1049,55 @@ main {
     padding: 0.5rem 0;
   }
 }
+
+/* ===== Workout tables: base style ===== */
+.workout-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.workout-table th,
+.workout-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: top;
+}
+
+.workout-table thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* Wrapper that enables horizontal scroll on small screens */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smoother scrolling on iOS */
+}
+
+/* Optional: make the scrollbar a bit nicer (non-breaking if not supported) */
+.table-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+}
+
+/* ===== Mobile tweaks ===== */
+@media (max-width: 768px) {
+  .workout-table {
+    font-size: 0.8rem; /* slightly smaller text on phones */
+  }
+
+  .workout-table th,
+  .workout-table td {
+    padding: 0.4rem 0.5rem;
+    white-space: nowrap; /* keep cells on one line; rely on horizontal scroll */
+  }
+}

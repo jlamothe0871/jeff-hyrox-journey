@@ -1019,7 +1019,7 @@ main {
   }
 }
 
-/* ===== Header & Navigation ===== */
+/* ===== Header & Navigation (mobile-first) ===== */
 
 .site-header {
   position: sticky;
@@ -1044,51 +1044,41 @@ main {
 .brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: radial-gradient(circle at 30% 20%, #ffb386, #ff4b26);
+  box-shadow: 0 0 18px rgba(255, 75, 38, 0.6);
+}
+
+.brand-title {
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: var(--text);
 }
 
-.brand img {
-  width: 26px;
-  height: 26px;
-  border-radius: 999px;
-}
-
-/* Desktop nav links */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 0.85rem;
-}
-
-.nav-links a {
-  text-decoration: none;
+.brand-subtitle {
+  font-size: 0.75rem;
   color: var(--muted);
-  padding: 4px 9px;
-  border-radius: 999px;
-  transition: color var(--transition-fast), background var(--transition-fast);
-  white-space: nowrap;
 }
 
-.nav-links a:hover {
-  color: var(--text);
-  background: var(--accent-soft);
-}
+/* --- MOBILE-FIRST NAV --- */
 
-/* Hamburger icon (hidden on desktop) */
+/* 1) Mobile default: hamburger visible, links hidden in dropdown */
 .nav-toggle {
-  display: none;
+  display: block;
   border: none;
   background: transparent;
   cursor: pointer;
   padding: 4px;
-  margin-left: auto;
+  margin-left: 12px;
 }
 
 .nav-toggle span {
@@ -1104,56 +1094,87 @@ main {
   margin-top: 4px;
 }
 
-/* ===== Mobile nav ===== */
+/* Links are hidden by default on mobile */
+.nav-links {
+  position: absolute;
+  top: 56px;
+  right: 16px;
+  left: 16px;
 
-@media (max-width: 720px) {
+  display: none;              /* key: default = hidden */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+
+  padding: 10px 12px 12px;
+  background: rgba(5, 5, 10, 0.98);
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+  font-size: 0.85rem;
+}
+
+.nav-links a {
+  display: block;
+  width: 100%;
+  padding: 6px 8px;
+  text-decoration: none;
+  color: var(--muted);
+  border-radius: 999px;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.nav-cta:hover {
+  color: var(--text);
+  background: var(--accent-soft);
+}
+
+.nav-links .nav-cta {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* When menu is open (any viewport) */
+.nav-links.nav-open {
+  display: flex;
+}
+
+/* Hamburger animates into an X when open */
+.nav-toggle.nav-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-toggle.nav-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.nav-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* 2) Desktop override: full horizontal nav, no hamburger */
+@media (min-width: 901px) {
   .nav-inner {
-    padding-inline: 16px;
+    padding-inline: 18px;
   }
 
-  /* Show hamburger, hide inline nav by default */
   .nav-toggle {
-    display: block;
+    display: none;                /* hide hamburger on desktop */
   }
 
   .nav-links {
-    position: absolute;
-    top: 56px;              /* approximate header height */
-    right: 16px;
-    left: 16px;
+    position: static;
+    display: flex;                /* always visible on desktop */
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
 
-    display: none;          /* hidden until toggled */
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-
-    padding: 10px 12px 12px;
-    background: rgba(5, 5, 10, 0.98);
-    border-radius: 14px;
-    box-shadow: var(--shadow-soft);
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
   }
 
   .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 6px 8px;
-  }
-
-  /* When menu is open */
-  .nav-links.nav-open {
-    display: flex;
-  }
-
-  /* Animate hamburger to an "X" when open (optional) */
-  .nav-toggle.nav-open span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
-  }
-
-  .nav-toggle.nav-open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle.nav-open span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
+    width: auto;
+    padding: 4px 10px;
   }
 }

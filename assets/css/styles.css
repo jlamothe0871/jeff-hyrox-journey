@@ -1072,3 +1072,18 @@ main {
     white-space: nowrap; /* keep columns on one line, rely on horizontal scroll */
   }
 }
+/* We already set nowrap for mobile, so make sure scrolling happens inside the card/table-scroll */
+@media (max-width: 768px) {
+  .card {
+    overflow-x: auto; /* let content scroll rather than bleed out */
+  }
+
+  .card .table-scroll {
+    max-width: 100%;
+  }
+
+  .session-table th,
+  .session-table td {
+    white-space: nowrap; /* rely on horizontal scroll */
+  }
+}

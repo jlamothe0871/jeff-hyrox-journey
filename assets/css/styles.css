@@ -131,11 +131,11 @@ main {
   background: #ff6b47;
 }
 
-/* Mobile nav */
+/* Mobile nav 
 .nav-toggle {
   <!--display: none;-->
   cursor: pointer;
-}
+}*/
 
 .nav-toggle span {
   width: 22px;

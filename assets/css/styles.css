@@ -1101,3 +1101,22 @@ main {
     white-space: nowrap; /* keep cells on one line; rely on horizontal scroll */
   }
 }
+/* === Simple mobile nav override: always show links, no slide-down menu === */
+@media (max-width: 720px) {
+  .nav-links {
+    position: static;
+    inset: auto;
+    background: transparent;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8px 0;
+    align-items: center;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-toggle {
+    display: none; /* hide hamburger until we actually wire it up */
+  }
+}

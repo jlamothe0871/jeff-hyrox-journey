@@ -1120,3 +1120,17 @@ main {
     display: none; /* hide hamburger until we actually wire it up */
   }
 }
+
+/* Ensure session tables behave nicely inside cards on small screens */
+.session-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .session-table th,
+  .session-table td {
+    white-space: nowrap; /* keep columns on one line, rely on horizontal scroll */
+  }
+}

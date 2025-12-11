@@ -131,12 +131,6 @@ main {
   background: #ff6b47;
 }
 
-/* Mobile nav 
-.nav-toggle {
-  <!--display: none;-->
-  cursor: pointer;
-}*/
-
 .nav-toggle span {
   width: 22px;
   height: 2px;
@@ -148,31 +142,6 @@ main {
 
 .nav-toggle span + span {
   margin-top: 5px;
-}
-
-@media (max-width: 720px) {
-  .nav-links {
-    position: fixed;
-    inset: var(--nav-height) 0 auto;
-    background: rgba(5,5,10,0.98);
-    flex-direction: column;
-    padding: 16px 18px 18px;
-    align-items: flex-start;
-    transform: translateY(-120%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform var(--transition-fast), opacity var(--transition-fast);
-  }
-
-  .nav-links.nav-open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
 }
 
 /* Hero / common sections */
@@ -330,16 +299,6 @@ main {
   align-items: baseline;
   gap: 12px;
   margin-bottom: 16px;
-}
-
-.section-title {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.section-subtitle {
-  font-size: 13px;
-  color: var(--muted);
 }
 
 .card-grid {
@@ -1026,27 +985,6 @@ main {
   }
   .hero {
     padding: 18px;
-  }
-}
-
-/* Make sure nav always shows, even on mobile */
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-/* Mobile tweaks */
-@media (max-width: 768px) {
-  .site-nav {
-    display: flex;           /* override any earlier display:none */
-    flex-direction: column;  /* stack links vertically */
-    gap: 0.5rem;
-  }
-
-  .site-nav a {
-    display: block;
-    padding: 0.5rem 0;
   }
 }
 

@@ -1041,23 +1041,35 @@ main {
 }
 /* === Simple mobile nav override: always show links, no slide-down menu === */
 @media (max-width: 720px) {
+  .nav-inner {
+    flex-direction: column;       /* Logo and links stacked */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
   .nav-links {
     position: static;
     inset: auto;
     background: transparent;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 8px 0;
-    align-items: center;
+    flex-direction: column;       /* Stack links vertically */
+    flex-wrap: nowrap;            /* No wrapping needed now */
+    padding: 4px 0 0;
+    align-items: flex-start;
     transform: none;
     opacity: 1;
     pointer-events: auto;
   }
 
+  .nav-links a {
+    display: block;
+    padding: 4px 0;               /* Nice tap targets */
+  }
+
   .nav-toggle {
-    display: none; /* hide hamburger until we actually wire it up */
+    display: none;                /* Still hiding hamburger until we wire it up */
   }
 }
+
 
 /* Ensure session tables behave nicely inside cards on small screens */
 .session-table {

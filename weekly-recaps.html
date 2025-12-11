@@ -14,6 +14,8 @@
     <header class="site-header">
       <div class="nav-inner">
         <a href="index.html" class="brand">
+          <link rel="icon" href="assets/img/favicon.png" sizes="32x32">
+        <link rel="apple-touch-icon" href="assets/img/favicon.png">
           <div class="brand-mark"></div>
           <div class="brand-text">
             <span class="brand-title">Everyday Engine</span>
@@ -21,6 +23,12 @@
           </div>
         </a>
     
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="journey-dashboard.html">Journey Dashboard</a>
@@ -31,11 +39,6 @@
       <a href="start-your-journey.html">Start Your Own Journey</a>
       <a href="community.html" class="nav-cta">Community</a>
     </nav>
-    
-    
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
       </div>
     </header>
     <main>
@@ -144,6 +147,20 @@
         <div>Built to document a real Hyrox journey week by week. No hype, just honest work.</div>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const links  = document.querySelector('.nav-links');
+    
+        if (!toggle || !links) return;
+    
+        toggle.addEventListener('click', () => {
+          links.classList.toggle('nav-open');
+          toggle.classList.toggle('nav-open');
+        });
+      });
+    </script>
+    
   </body>
 </html>
 

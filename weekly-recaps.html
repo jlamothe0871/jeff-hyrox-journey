@@ -7,7 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?!= include('styles'); ?>
     <link rel="stylesheet" href="assets/css/styles.css?v=7">
-
+    <style>
+      /* Week selector */
+      .week-select {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 14px;
+        padding: 12px 14px;
+        border: 1px solid var(--border-subtle);
+        border-radius: 14px;
+        background: rgba(255,255,255,0.03);
+      }
+      .week-select label { color: var(--muted); font-size: 0.95rem; }
+      .week-select select{
+        flex: 1;
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border-subtle);
+        background: rgba(0,0,0,0.2);
+        color: var(--text);
+        outline: none;
+      }
+      .week-select select:focus{
+        border-color: rgba(255,75,38,0.8);
+        box-shadow: 0 0 0 3px rgba(255,75,38,0.15);
+      }
+      .week-helper {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .video-embed iframe { width:100%; }
+    </style>
   </head>
   <body>
     <?!= include('header'); ?>
@@ -20,13 +52,13 @@
             <span class="brand-subtitle">Hyrox Journey</span>
           </div>
         </a>
-    
+
         <button class="nav-toggle" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
-    
+
         <nav class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="journey-dashboard.html">Journey Dashboard</a>
@@ -39,7 +71,7 @@
         </nav>
       </div>
     </header>
-    
+
     <main>
       <div class="page-wrap">
 
@@ -49,21 +81,73 @@
             <p class="section-subtitle">
               Each week: one video, a few key stats, and an honest reflection on how it went.
             </p>
+
+            <!-- ✅ Week selector (defaults to latest) -->
+            <div class="week-select">
+              <label for="weekSelect">Select week:</label>
+              <select id="weekSelect" aria-label="Select recap week"></select>
+            </div>
           </div>
         </section>
 
         <section class="section">
           <div class="recap-list">
 
-            <!-- ====== TEMPLATE: WEEK 01 CARD ====== -->
-            <article class="recap-card">
+            <!-- ====== WEEK 02 CARD (LATEST) ====== -->
+            <article class="recap-card" data-week="2025-12-14">
+              <div class="recap-meta">Week 02 · Dec 8 – Dec 14, 2025</div>
+              <h2 class="recap-title">Building Volume Without Breaking</h2>
+
+              <div class="recap-columns">
+                <div class="recap-text">
+                  <p>
+                    This week was about increasing total volume and introducing more intensity—without breaking down.
+                    I did less running and more walking, prioritized HRV early due to travel stress, and focused on burpees
+                    plus functional mobility. The result: higher mileage, higher VO₂ Max, and zero DOMS.
+                  </p>
+
+                  <div class="card" style="margin-top: 10px;">
+                    <div class="card-tag">Reflection</div>
+                    <p class="card-body">
+                      Wins: First run felt the fastest and most comfortable of the block. VO₂ Max rose even with less running.
+                      Focused on burpees + functional mobility and recovered well (zero DOMS).<br>
+                      Needs work: Bring back structured strength work while keeping recovery and HRV trending up.
+                    </p>
+                  </div>
+
+                  <div class="recap-keypoints">
+                    <strong>Key metrics:</strong><br>
+                    • Total time: 11h 40m · Total miles: 34.09<br>
+                    • HR Zones: Z1 504m · Z2 44m · Z3 93m · Z4 54m · Z5 5m<br>
+                    • VO₂ Max: 42 → 43.4 · DOMS: Zero<br>
+                    • Theme: Building volume without breaking (6 weeks to race day)
+                  </div>
+
+                  <div class="card" style="margin-top: 10px;">
+                    <div class="card-tag">Week 03 Focus</div>
+                    <p class="card-body">
+                      🏋️ 2 strength sessions · 🧘 2 professional stretch sessions · 🫀 maintain aerobic base · ✈️ prep for holiday travel (Weeks 4–5)
+                    </p>
+                  </div>
+
+                  <div class="video-embed" style="margin-top: 12px;">
+                    <!-- Paste Synthesia Week 02 embed iframe below when ready -->
+                    <div class="video-embed">
+                      <div style="position: relative; overflow: hidden; aspect-ratio: 1920/1080"><iframe src="https://share.synthesia.io/embeds/videos/083de21a-7de4-486f-8f48-8ccdffecd03c" loading="lazy" title="Synthesia video player - Hyrox Week02 Recap" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                    </div>
+                </div>
+              </div>
+            </article>
+            <!-- ====== END WEEK 02 ====== -->
+
+            <!-- ====== WEEK 01 CARD (PRESERVED) ====== -->
+            <article class="recap-card" data-week="2025-12-07">
               <div class="recap-meta">Week 01 · Dec 1 – Dec 7, 2025</div>
               <h2 class="recap-title">Base building – The journey begins</h2>
 
               <div class="recap-columns">
                 <div class="recap-text">
                   <p>
-                    <!-- TODO: Update per week -->
                     This week was about re-establishing the routine. I focused on easy
                     Zone 2 work, a few strength sessions, and getting my body used to
                     structure again after some inconsistency.
@@ -71,68 +155,32 @@
                   <div class="card" style="margin-top: 10px;">
                     <div class="card-tag">Reflection</div>
                     <p class="card-body">
-                      <!-- TODO: Update reflection -->
                       Wins: Lot of NSDR and Box breathing as zone 1, rebuilt consistency and respected easy days.<br>
                       Needs work: mobility, pre-sleep routine, hydration on longer days.
                     </p>
                   </div>
                   <div class="recap-keypoints">
                     <strong>Key metrics:</strong><br>
-                    <!-- TODO: Update each week -->
                     • Total time: 11h 45m · 25 sessions<br>
                     • Longest run session: 55 minutes zone 1 - zone 3 controlled cardio<br>
                     • Longest Hyrox focused session: 1 Hour 17 minutes zone 1 - zone 5 controlled cardio<br>
                     • Focus: build foundation without overreaching
                   </div>
                   <div class="video-embed">
-                     <div style="position: relative; overflow: hidden; aspect-ratio: 1920/1080"><iframe src="https://share.synthesia.io/embeds/videos/ec59b781-b6a6-498c-8823-ec7e0debff3a" loading="lazy" title="Synthesia video player - Jeff HYROX Week1 Recap" allowfullscreen allow="encrypted-media; fullscreen; microphone;" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;"></iframe></div>
+                    <div style="position: relative; overflow: hidden; aspect-ratio: 1920/1080">
+                      <iframe src="https://share.synthesia.io/embeds/videos/ec59b781-b6a6-498c-8823-ec7e0debff3a"
+                        loading="lazy"
+                        title="Synthesia video player - Jeff HYROX Week1 Recap"
+                        allowfullscreen
+                        allow="encrypted-media; fullscreen; microphone;"
+                        style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;">
+                      </iframe>
                     </div>
+                  </div>
                 </div>
               </div>
             </article>
             <!-- ====== END WEEK 01 ====== -->
-
-            <!-- ====== TEMPLATE: COPY/PASTE FOR WEEK 02, 03, etc. ====== -->
-            <!--
-            <article class="recap-card">
-              <div class="recap-meta">Week 02 · Dec 1 – Dec 7, 2025</div>
-              <h2 class="recap-title">Example title – building the engine</h2>
-
-              <div class="recap-columns">
-                <div class="recap-text">
-                  <p>
-                    Replace this with your Week 02 story: key changes, what felt better,
-                    what was hard, and any adjustments you made.
-                  </p>
-
-                  <div class="slides-embed">
-                    <iframe src="YOUR_WEEK2_SLIDES_EMBED_URL"></iframe>
-                  </div>
-
-                  <div class="recap-keypoints">
-                    <strong>Key metrics:</strong><br>
-                    • Total time: Xh Ym · N sessions<br>
-                    • Longest session: ____<br>
-                    • Focus: __________________
-                  </div>
-                </div>
-
-                <div>
-                  <div class="video-embed">
-                    <iframe src="YOUTUBE_EMBED_URL_FOR_WEEK2" allowfullscreen></iframe>
-                  </div>
-
-                  <div class="card" style="margin-top: 10px;">
-                    <div class="card-tag">Reflection</div>
-                    <p class="card-body">
-                      Replace with Week 02 reflections.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </article>
-            -->
-            <!-- ====== END WEEK TEMPLATE ====== -->
 
           </div>
         </section>
@@ -146,20 +194,70 @@
         <div>Built to document a real Hyrox journey week by week. No hype, just honest work.</div>
       </div>
     </footer>
+
     <script>
       document.addEventListener('DOMContentLoaded', function () {
+        // Mobile nav toggle
         const toggle = document.querySelector('.nav-toggle');
         const links  = document.querySelector('.nav-links');
-    
-        if (!toggle || !links) return;
-    
-        toggle.addEventListener('click', () => {
-          links.classList.toggle('nav-open');
-          toggle.classList.toggle('nav-open');
-        });
+        if (toggle && links) {
+          toggle.addEventListener('click', () => {
+            links.classList.toggle('nav-open');
+            toggle.classList.toggle('nav-open');
+          });
+        }
+
+        // Week selector logic
+        const RECAP_WEEKS = [
+          { key: "2025-12-14", label: "Week 02 (Dec 8 – Dec 14, 2025)", default: true },
+          { key: "2025-12-07", label: "Week 01 (Dec 1 – Dec 7, 2025)" }
+        ];
+
+        const select = document.getElementById("weekSelect");
+        const cards = Array.from(document.querySelectorAll("[data-week]"));
+
+        function getWeekFromUrl() {
+          const params = new URLSearchParams(window.location.search);
+          return params.get("week");
+        }
+
+        function setWeekInUrl(weekKey) {
+          const url = new URL(window.location.href);
+          url.searchParams.set("week", weekKey);
+          window.history.replaceState({}, "", url.toString());
+        }
+
+        function showWeek(weekKey) {
+          cards.forEach(el => {
+            el.style.display = (el.getAttribute("data-week") === weekKey) ? "block" : "none";
+          });
+          setWeekInUrl(weekKey);
+        }
+
+        function initSelector() {
+          if (!select) return;
+
+          // Build dropdown
+          RECAP_WEEKS.forEach(w => {
+            const opt = document.createElement("option");
+            opt.value = w.key;
+            opt.textContent = w.label;
+            select.appendChild(opt);
+          });
+
+          // Default week = URL param > default flag > first
+          const urlWeek = getWeekFromUrl();
+          const defaultWeek = urlWeek || (RECAP_WEEKS.find(w => w.default)?.key) || RECAP_WEEKS[0].key;
+
+          select.value = defaultWeek;
+          showWeek(defaultWeek);
+
+          select.addEventListener("change", (e) => showWeek(e.target.value));
+        }
+
+        initSelector();
       });
     </script>
-    
+
   </body>
 </html>
-

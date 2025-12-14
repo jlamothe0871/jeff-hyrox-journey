@@ -1529,3 +1529,134 @@ main {
 @media (max-width: 720px){
   .insight-callouts{ grid-template-columns: 1fr; }
   .insight-question{ font-size: 16px; }
+}
+/* Winter Training Badge Card (uses your existing theme vars) */
+.badge-card{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  padding:16px;
+  margin:18px 0;
+  background: var(--card-bg, #1c1c24);
+  border: 1px solid var(--border-subtle, #2a2a35);
+  border-radius: var(--radius-xl, 26px);
+  box-shadow: var(--shadow-soft, 0 18px 45px rgba(0,0,0,.4));
+}
+.badge-left{
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  background: var(--accent-soft, rgba(255,75,38,.12));
+  border: 1px solid rgba(255,75,38,.25);
+  font-size: 22px;
+  flex: 0 0 auto;
+}
+.badge-kicker{
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--muted, #a0a3b1);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.badge-title{
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--text, #f5f5f7);
+}
+.badge-text{
+  margin: 0 0 10px;
+  color: var(--text, #f5f5f7);
+  line-height: 1.6;
+  font-size: 14px;
+}
+.badge-list{
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--muted, #a0a3b1);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.badge-list strong{ color: var(--text, #f5f5f7); }
+
+@media (max-width: 720px){
+  .badge-card{ padding:14px; }
+  .badge-title{ font-size: 16px; }
+}
+
+/* Winter Training Badge */
+.winter-badge {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 16px;
+  margin: 24px 0;
+  box-shadow: var(--shadow-soft);
+}
+
+.winter-badge-img {
+  width: 180px;
+  max-width: 40%;
+  border-radius: 18px;
+  flex-shrink: 0;
+}
+
+.winter-badge-text .kicker {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.winter-badge-text h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: var(--text);
+}
+
+.winter-badge-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .winter-badge {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .winter-badge-img {
+    max-width: 100%;
+  }
+}
+/* Clickable badge wrapper */
+.winter-badge-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Hover / focus feedback */
+.winter-badge-link:hover .winter-badge {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.55);
+}
+
+.winter-badge-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Smooth animation */
+.winter-badge {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}

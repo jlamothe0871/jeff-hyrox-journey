@@ -233,6 +233,34 @@
   </aside>
 </section>
 
+        <!-- Winter Training Badge (clicks through to Journey Insights) -->
+<a href="journey-insights.html#insight-winter-protocol" class="winter-badge-link">
+  <section class="winter-badge">
+    <img
+      src="assets/img/hyrox-winter-training-badge.png"
+      alt="HYROX Winter Training Badge – Cold-Season Engine Builder"
+      class="winter-badge-img"
+    />
+
+    <div class="winter-badge-text">
+      <div class="kicker">WINTER PROTOCOL</div>
+      <h3>Cold-Season Engine Builder</h3>
+      <p>
+        This badge represents disciplined winter training — maintaining aerobic capacity (VO₂ max),
+        recovery, and HYROX readiness when conditions are harder—cold weather, travel, holiday stress, and disrupted sleep.
+        Winter isn’t downtime. It’s where the engine is built.
+      </p>
+
+      <ul class="badge-list">
+        <li><strong>Earned by:</strong> following the Winter Protocol weekly (Anchor VO₂ + Zone 2 + HYROX-specific day + recovery).</li>
+        <li><strong>Signals:</strong> consistent training rhythm, improved readiness, and a steady VO₂ trend line over weeks.</li>
+        <li><strong>Purpose:</strong> motivation + identity — a reminder that winter work builds spring performance.</li>
+      </ul>
+    </div>
+  </section>
+</a>
+
+ 
         <!-- Why I'm sharing -->
         <section class="section">
           <div class="section-header">
@@ -396,6 +424,15 @@
         initSnapshotSelector();
 
       });
+    </script>
+    <script>
+      if (location.hash) {
+        const target = document.querySelector(location.hash);
+        if (target && target.tagName === 'DETAILS') {
+          target.open = true;
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     </script>
     
   </body>

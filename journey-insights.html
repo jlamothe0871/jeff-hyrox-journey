@@ -120,6 +120,46 @@
   </div>
 </details>
 
+<!-- Insight 03 -->
+<details class="insight" id="insight-winter-protocol">
+  <summary>
+    <div class="q-icon" aria-hidden="true">
+      <span style="font-weight:800; color: var(--accent);">?</span>
+    </div>
+    <div class="q-title">
+      <div class="kicker">INSIGHT #03 • Winter Protocol</div>
+      <p class="question">What’s your winter training protocol to keep VO₂ max trending up (and tracking clean) when it’s cold and routines get disrupted?</p>
+    </div>
+    <div class="chev" aria-hidden="true">⌄</div>
+  </summary>
+
+  <div class="answer">
+    <p>
+      Winter is when VO₂ max readings can get noisy and training consistency can get fragile (cold temps, travel, poor sleep,
+      holiday stress, reduced outdoor volume). My goal in winter is simple:
+      <strong>keep the aerobic engine progressing</strong> while protecting recovery so the VO₂ trend stays meaningful.
+    </p>
+
+    <ul>
+      <li><strong>1 “Anchor VO₂” session per week:</strong> short, hard intervals (controlled) to keep the ceiling rising.</li>
+      <li><strong>2 aerobic base sessions per week:</strong> Zone 2 work to build capacity and improve recovery between efforts.</li>
+      <li><strong>1 HYROX-specific compromised run day:</strong> station-to-run combinations to keep race feel without overcooking fatigue.</li>
+      <li><strong>Strength stays, volume gets smarter:</strong> maintain strength, but don’t let leg soreness crush run quality.</li>
+      <li><strong>NSDR is non-negotiable:</strong> quick downshifts to keep stress from masking fitness in the metrics.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Tracking rule:</strong> VO₂ max is a trend, not a daily grade. In winter, I focus on a clean weekly pattern:
+      consistent sessions + consistent sleep + consistent recovery = a reading you can trust.
+    </div>
+
+    <p style="margin-top:12px; color: var(--muted);">
+      If the ring/watch dips during winter (cold sleep environment, travel, dehydration, late workouts), I don’t panic.
+      I tighten the protocol: hydration, sleep timing, Zone 2, and one quality VO₂ session — and the trend corrects.
+    </p>
+  </div>
+</details>
+
       <!-- Add more insights below by duplicating a <details class="insight"> block -->
       <!--
       <details class="insight">
@@ -135,6 +175,16 @@
     </div>
 
   </div>
+  <script>
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target && target.tagName === 'DETAILS') {
+        target.open = true;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  </script>
+  
 </body>
 </html>
 

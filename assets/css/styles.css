@@ -1412,3 +1412,120 @@ main {
     min-height: 780px;       /* forms tend to be tall */
   }
 }
+ /* Journey Insights – NSDR card (fits the Hyrox Journey dark theme) */
+ .insight-card{
+  background: var(--card-bg, #1c1c24);
+  border: 1px solid var(--border-subtle, #2a2a35);
+  border-radius: var(--radius-xl, 26px);
+  box-shadow: var(--shadow-soft, 0 18px 45px rgba(0,0,0,.4));
+  padding: 18px;
+  margin: 18px 0;
+  overflow: hidden;
+}
+.insight-header{
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle, #2a2a35);
+}
+.insight-icon{
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft, rgba(255,75,38,.12));
+  border: 1px solid rgba(255,75,38,.25);
+  font-size: 20px;
+  flex: 0 0 auto;
+}
+.insight-question{
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--text, #f5f5f7);
+  letter-spacing: .2px;
+}
+.insight-subtitle{
+  margin: 8px 0 0;
+  color: var(--muted, #a0a3b1);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.insight-body{
+  padding-top: 14px;
+  color: var(--text, #f5f5f7);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.insight-body h3{
+  margin: 14px 0 8px;
+  font-size: 15px;
+  letter-spacing: .2px;
+}
+.insight-body p{
+  margin: 0 0 10px;
+  color: var(--text, #f5f5f7);
+}
+.insight-callouts{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 12px 0 6px;
+}
+.callout{
+  background: var(--bg-alt, #14141a);
+  border: 1px solid var(--border-subtle, #2a2a35);
+  border-radius: 18px;
+  padding: 12px;
+}
+.callout-title{
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text, #f5f5f7);
+}
+.callout-text{
+  margin: 0;
+  color: var(--muted, #a0a3b1);
+}
+.insight-list{
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--text, #f5f5f7);
+}
+.insight-list li{
+  margin: 6px 0;
+  color: var(--muted, #a0a3b1);
+}
+.insight-list strong{
+  color: var(--text, #f5f5f7);
+}
+.insight-bottom{
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle, #2a2a35);
+}
+.insight-takeaway{
+  margin: 0 0 10px;
+}
+.insight-mini{
+  background: linear-gradient(180deg, rgba(255,75,38,.12), rgba(255,75,38,.06));
+  border: 1px solid rgba(255,75,38,.22);
+  border-radius: 18px;
+  padding: 12px;
+}
+.mini-title{
+  font-weight: 800;
+  color: var(--text, #f5f5f7);
+  margin-bottom: 4px;
+}
+.mini-text{
+  margin: 0;
+  color: var(--text, #f5f5f7);
+}
+
+/* Mobile */
+@media (max-width: 720px){
+  .insight-callouts{ grid-template-columns: 1fr; }
+  .insight-question{ font-size: 16px; }

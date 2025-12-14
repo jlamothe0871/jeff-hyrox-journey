@@ -4,194 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Journey Insights</title>
-  <style>
-    :root{
-      --bg:#0c0c0f;
-      --bg2:#14141a;
-      --card:#1c1c24;
-      --text:#f5f5f7;
-      --muted:#a0a3b1;
-      --border:#2a2a35;
-      --accent:#ff4b26;
-      --accentSoft: rgba(255,75,38,.14);
-      --radius:18px;
-      --shadow:0 18px 45px rgba(0,0,0,.45);
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:var(--sans);
-      background: radial-gradient(1200px 800px at 20% 10%, rgba(255,75,38,.10), transparent 60%),
-                  radial-gradient(900px 700px at 90% 20%, rgba(255,75,38,.06), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-    }
-    .page{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 18px 70px;
-    }
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      margin-bottom: 18px;
-    }
-    .crumbs{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      color:var(--muted);
-      font-size: 14px;
-    }
-    .crumbs a{ color: var(--muted); text-decoration:none; }
-    .crumbs a:hover{ color: var(--text); }
-    .badge{
-      font-family: var(--mono);
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-    }
-
-    .hero{
-      background: linear-gradient(180deg, rgba(255,75,38,.12), rgba(255,75,38,.03));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px 18px;
-      box-shadow: var(--shadow);
-      margin-bottom: 16px;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero:before{
-      content:"";
-      position:absolute;
-      top:0; left:0; right:0;
-      height: 6px;
-      background: linear-gradient(90deg, var(--accent), rgba(255,75,38,.2));
-    }
-    .hero h1{
-      margin: 6px 0 10px;
-      font-size: 28px;
-      letter-spacing: .2px;
-    }
-    .hero p{
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: 15px;
-      max-width: 72ch;
-    }
-
-    .insight-grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    details.insight{
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.02);
-      overflow:hidden;
-    }
-    details.insight[open]{
-      background: rgba(255,255,255,.03);
-      box-shadow: 0 12px 30px rgba(0,0,0,.35);
-    }
-    summary{
-      list-style:none;
-      cursor:pointer;
-      padding: 16px 16px;
-      display:flex;
-      align-items:flex-start;
-      gap: 12px;
-    }
-    summary::-webkit-details-marker{ display:none; }
-
-    .q-icon{
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display:grid;
-      place-items:center;
-      background: var(--accentSoft);
-      border: 1px solid rgba(255,75,38,.35);
-      flex: 0 0 auto;
-      margin-top: 2px;
-    }
-    .q-title{
-      flex: 1 1 auto;
-    }
-    .q-title .kicker{
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-    .q-title .question{
-      font-size: 16px;
-      font-weight: 650;
-      line-height: 1.35;
-      margin: 0;
-    }
-    .chev{
-      margin-left:auto;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1;
-      padding-top: 6px;
-    }
-    details[open] .chev{ transform: rotate(180deg); }
-
-    .answer{
-      padding: 0 16px 16px 62px;
-      color: var(--text);
-      line-height: 1.6;
-      font-size: 15px;
-    }
-    .answer p{ margin: 0 0 10px; color: var(--text); }
-    .answer ul{
-      margin: 10px 0 0 18px;
-      padding: 0;
-      color: var(--muted);
-    }
-    .answer li{ margin: 8px 0; }
-    .answer strong{ color: var(--text); }
-
-    .callout{
-      margin-top: 12px;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,75,38,.28);
-      background: rgba(255,75,38,.08);
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    .footer-note{
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-    .footer-note code{
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--text);
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--border);
-      padding: 2px 6px;
-      border-radius: 8px;
-    }
-  </style>
+  <?!= include('styles'); ?>
+  <link rel="stylesheet" href="assets/css/styles.css?v=7">
 </head>
 
 <body>
@@ -260,6 +74,52 @@
         </div>
       </details>
 
+      <!-- Insight 02 -->
+<details class="insight">
+  <summary>
+    <div class="q-icon" aria-hidden="true">
+      <span style="font-weight:800; color: var(--accent);">?</span>
+    </div>
+    <div class="q-title">
+      <div class="kicker">INSIGHT #02 • Recovery & Nervous System</div>
+      <p class="question">I notice multiple NSDR breathing sessions on some days and at least one every day. What is NSDR and why is it important to HYROX?</p>
+    </div>
+    <div class="chev" aria-hidden="true">⌄</div>
+  </summary>
+
+  <div class="answer">
+    <p>
+      <strong>NSDR</strong> stands for <strong>Non-Sleep Deep Rest</strong>. It’s a short, guided breathing and body-scan practice
+      that places the nervous system into a deeply relaxed state <em>without</em> sleeping.
+      Think of it as structured recovery for your brain and nervous system.
+    </p>
+
+    <p>
+      HYROX places repeated stress on the body: high heart rates, heavy muscular fatigue, and limited recovery time.
+      If your nervous system stays stuck in “go mode,” performance drops and recovery slows.
+      NSDR helps restore balance so you can train hard and absorb the work.
+    </p>
+
+    <ul>
+      <li><strong>Faster recovery between sessions:</strong> down-regulates stress so the body can repair and adapt.</li>
+      <li><strong>Better pacing control:</strong> a calmer nervous system improves breathing rhythm and decision-making under fatigue.</li>
+      <li><strong>Improved HRV and readiness:</strong> consistent NSDR supports parasympathetic recovery signals.</li>
+      <li><strong>Sleep quality support:</strong> helps reduce “wired but tired” evenings during heavy training weeks.</li>
+      <li><strong>Repeatable output:</strong> HYROX rewards athletes who can recover quickly and perform again — NSDR trains that skill.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Why multiple sessions?</strong> On hard training days, travel days, or high-stress days, short NSDR sessions
+      act as “reset buttons” — post-workout, mid-day, or before bed — to keep recovery on track.
+    </div>
+
+    <p style="margin-top:12px; color: var(--muted);">
+      Bottom line: NSDR isn’t passive relaxation — it’s an intentional recovery tool that allows higher training quality,
+      better consistency, and improved race-day composure.
+    </p>
+  </div>
+</details>
+
       <!-- Add more insights below by duplicating a <details class="insight"> block -->
       <!--
       <details class="insight">
@@ -271,7 +131,7 @@
     </section>
 
     <div class="footer-note">
-      Want a question answered here? Add it to your log and tag it <code>INSIGHT</code> — I’ll turn it into a clean entry.
+      Want a question answered here? Fill out the community form and tag it <code>INSIGHT</code> — I’ll turn it into a clean entry.
     </div>
 
   </div>

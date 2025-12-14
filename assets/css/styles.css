@@ -1178,3 +1178,237 @@ main {
     padding: 4px 10px;
   }
 }
+
+<!-- If your site already loads a global stylesheet, you can remove the <style> below
+       and copy these styles into your main CSS file. -->
+    :root{
+      --bg:#0c0c0f;
+      --bg2:#14141a;
+      --card:#1c1c24;
+      --text:#f5f5f7;
+      --muted:#a0a3b1;
+      --border:#2a2a35;
+      --accent:#ff4b26;
+      --accentSoft: rgba(255,75,38,.14);
+      --radius:18px;
+      --shadow:0 18px 45px rgba(0,0,0,.45);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background: radial-gradient(1200px 800px at 20% 10%, rgba(255,75,38,.10), transparent 60%),
+                  radial-gradient(900px 700px at 90% 20%, rgba(255,75,38,.06), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    .page{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 70px;
+    }
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom: 18px;
+    }
+    .crumbs{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      color:var(--muted);
+      font-size: 14px;
+    }
+    .crumbs a{ color: var(--muted); text-decoration:none; }
+    .crumbs a:hover{ color: var(--text); }
+    .badge{
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+    }
+
+    .hero{
+      background: linear-gradient(180deg, rgba(255,75,38,.12), rgba(255,75,38,.03));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      top:0; left:0; right:0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--accent), rgba(255,75,38,.2));
+    }
+    .hero h1{
+      margin: 6px 0 10px;
+      font-size: 28px;
+      letter-spacing: .2px;
+    }
+    .hero p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+      max-width: 72ch;
+    }
+
+    .insight-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    details.insight{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.02);
+      overflow:hidden;
+    }
+    details.insight[open]{
+      background: rgba(255,255,255,.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding: 16px 16px;
+      display:flex;
+      align-items:flex-start;
+      gap: 12px;
+    }
+    summary::-webkit-details-marker{ display:none; }
+
+    .q-icon{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display:grid;
+      place-items:center;
+      background: var(--accentSoft);
+      border: 1px solid rgba(255,75,38,.35);
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+    .q-title{
+      flex: 1 1 auto;
+    }
+    .q-title .kicker{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .q-title .question{
+      font-size: 16px;
+      font-weight: 650;
+      line-height: 1.35;
+      margin: 0;
+    }
+    .chev{
+      margin-left:auto;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1;
+      padding-top: 6px;
+    }
+    details[open] .chev{ transform: rotate(180deg); }
+
+    .answer{
+      padding: 0 16px 16px 62px;
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+    .answer p{ margin: 0 0 10px; color: var(--text); }
+    .answer ul{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+    }
+    .answer li{ margin: 8px 0; }
+    .answer strong{ color: var(--text); }
+
+    .callout{
+      margin-top: 12px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,75,38,.28);
+      background: rgba(255,75,38,.08);
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .footer-note{
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .footer-note code{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text);
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+
+    .journey-insights-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(255,75,38,.14);
+      border: 1px solid rgba(255,75,38,.45);
+      color: #f5f5f7;
+      text-decoration:none;
+      font-weight: 650;
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    .journey-insights-btn:hover{
+      background: rgba(255,75,38,.18);
+      border-color: rgba(255,75,38,.60);
+      transform: translateY(-1px);
+    }
+
+    /* Responsive Google Form embed */
+.form-embed {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;          /* prevent sideways page scrolling */
+  border-radius: 16px;       /* optional: matches modern card styling */
+}
+
+.form-embed iframe {
+  display: block;
+  width: 1px;                /* trick for some mobile browsers */
+  min-width: 100%;
+  max-width: 100%;
+  height: 85vh;              /* fills most of the mobile screen */
+  min-height: 700px;         /* keeps it usable on desktop too */
+  border: 0;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .form-embed iframe {
+    height: 88vh;
+    min-height: 780px;       /* forms tend to be tall */
+  }
+}

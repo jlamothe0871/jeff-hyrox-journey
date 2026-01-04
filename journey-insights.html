@@ -31,7 +31,7 @@
     <section class="insight-grid">
 
       <!-- Insight 01 -->
-      <details class="insight" open>
+      <details class="insight">
         <summary>
           <div class="q-icon" aria-hidden="true">
             <span style="font-weight:800; color: var(--accent);">?</span>
@@ -160,6 +160,54 @@
   </div>
 </details>
 
+<!-- Insight 04 -->
+<details class="insight" id="insight-travel-recovery">
+  <summary>
+    <div class="q-icon" aria-hidden="true">
+      <span style="font-weight:800; color: var(--accent);">?</span>
+    </div>
+    <div class="q-title">
+      <div class="kicker">INSIGHT #04 • Travel & Recovery</div>
+      <p class="question">
+        What did last week of travel teach you about recovery, readiness, and training control?
+      </p>
+    </div>
+    <div class="chev" aria-hidden="true">⌄</div>
+  </summary>
+
+  <div class="answer">
+    <p>
+      Last week reinforced a simple truth: <strong>travel doesn’t break fitness — unmanaged recovery does</strong>.
+      Flights, disrupted sleep, time-zone shifts, and long days quietly tax the nervous system even when workouts
+      still “look good” on paper.
+    </p>
+
+    <p>
+      The biggest lesson wasn’t about doing less work — it was about doing the <em>right</em> work when recovery
+      signals are compromised.
+    </p>
+
+    <ul>
+      <li><strong>Readiness matters more than intent:</strong> when HRV and resting HR are off, intensity needs tighter control.</li>
+      <li><strong>Zone 2 becomes a stabilizer:</strong> aerobic work maintains momentum without adding recovery debt.</li>
+      <li><strong>NSDR isn’t optional while traveling:</strong> it becomes the primary tool for nervous system reset.</li>
+      <li><strong>Short sessions beat skipped sessions:</strong> consistency preserves rhythm even when volume drops.</li>
+      <li><strong>Metrics lag reality:</strong> recovery debt shows up days later — plan proactively, not reactively.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Key takeaway:</strong> travel weeks require tighter guardrails, not tougher workouts.
+      The goal is to protect the engine so quality can return quickly once routine normalizes.
+    </div>
+
+    <p style="margin-top:12px; color: var(--muted);">
+      Managing travel well isn’t about pushing through fatigue — it’s about staying disciplined enough
+      to arrive back home ready to train, not needing a reset week to recover.
+    </p>
+  </div>
+</details>
+
+
       <!-- Add more insights below by duplicating a <details class="insight"> block -->
       <!--
       <details class="insight">
@@ -184,6 +232,27 @@
       }
     }
   </script>
+  <script>
+  function openInsightFromHash() {
+    // Close all insights
+    document.querySelectorAll('details.insight').forEach(d => d.open = false);
+
+    // Open the one in the hash (if any)
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target && target.tagName === 'DETAILS') {
+        target.open = true;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', openInsightFromHash);
+
+  // If user clicks a link to another insight while already on the page
+  window.addEventListener('hashchange', openInsightFromHash);
+</script>
+
   
 </body>
 </html>

@@ -1029,5 +1029,26 @@ main {
     padding: 18px;
   }
 }
+
+/* Holiday badge link gets a different accent */
+.holiday-badge-link .kicker,
+.holiday-badge-link h3 {
+  color: #ffd2c6; /* subtle warm tint (adjust if you want) */
+}
+
+.holiday-badge-link:hover .holiday-badge {
+  border-color: var(--accent);
+}
+
+/* Optional: make the arrow / NEW pill pop without changing theme */
+.holiday-badge .new-pill {
+  background: var(--accent);
+  color: #fff;
+}
+.holiday-badge-link {
+  cursor: pointer;
+}
+
+
 </style>
 
